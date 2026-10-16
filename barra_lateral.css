@@ -1,0 +1,231 @@
+
+/* Ajustes para recuperar la barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 228px;
+    height: 100vh;
+    padding: 20px 12px;
+    background: #718bbd;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar .logo {
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sidebar .usuario {
+    background: rgba(255, 255, 255, 0.20);
+    padding: 14px 10px;
+    border-radius: 14px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.sidebar .datos-usuario {
+    width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.sidebar .datos-usuario strong {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.sidebar .avatar {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    border-radius: 12px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.sidebar .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sidebar .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+}
+
+.sidebar .menu a {
+    display: block;
+    color: #ffffff;
+    padding: 11px 10px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sidebar .menu a:hover,
+.sidebar .menu a.activo {
+    background: #ffffff;
+    color: #526fa7;
+}
+
+/* Evitar que el contenido quede debajo del menú */
+.contenido {
+    margin-left: 248px;
+    padding: 24px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Evitar que el logo principal ocupe toda la pantalla */
+.contenido > img {
+    max-width: 280px;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 175px;
+    }
+
+    .contenido {
+        margin-left: 190px;
+        padding: 12px;
+    }
+}
+
+/* Ajuste de la barra lateral al diseño de referencia */
+.sidebar {
+    width: 240px;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: var(--azul);
+}
+
+.sidebar .logo {
+    margin: 0;
+    padding: 6px 0 18px;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}
+
+/* Tarjeta del usuario */
+.sidebar .usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px;
+    padding: 14px 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 12px;
+}
+
+.sidebar .avatar {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.sidebar .avatar img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    object-fit: contain;
+}
+
+.sidebar .datos-usuario {
+    width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.sidebar .datos-usuario strong {
+    display: block;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.sidebar .datos-usuario small {
+    display: block;
+    margin-top: 4px;
+    color: #fff;
+    font-size: 11px;
+}
+
+/* Botones del menú */
+.sidebar .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.sidebar .menu a {
+    display: block;
+    padding: 11px 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.sidebar .menu a:hover,
+.sidebar .menu a.activo {
+    background: #fff;
+    color: var(--azul-oscuro);
+}
+
+.sidebar .menu a.cerrar,
+.sidebar .menu a.salir {
+    margin-top: auto;
+    background: rgba(45, 64, 103, 0.20);
+    color: #fff;
+}
+
+/* Espacio para el contenido principal */
+.contenido {
+    margin-left: 260px !important;
+    min-width: 0;
+    padding: 26px 28px 40px;
+    box-sizing: border-box;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 760px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar .menu {
+        flex: initial;
+    }
+
+    .sidebar .menu a.cerrar,
+    .sidebar .menu a.salir {
+        margin-top: 8px;
+    }
+
+    .contenido {
+        margin-left: 0 !important;
+        padding: 22px 14px;
+    }
+}
