@@ -286,7 +286,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <header>
         <div class="logo">V</div>
         <h1>VILLALINK</h1>
-        <p>Bienvenido de nuevo a nuestra comunidad</p>
+        <p>Bienvenido de nuevo a nuestra comunidad villa  de los niños</p>
     </header>
 
     <?php if ($error !== ""): ?>
